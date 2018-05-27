@@ -15,13 +15,30 @@
                   <li class="col">
                     <a href="/products/<%= product.id %>"><div class="thumbnail__figure" style="background-image:url(<%= product.image_url %>)"></div></a>
                     <div class="thumbnail__caption">
-                      <h3 class="text-xsmall text-overflow" title="タイトル">
-                        タイトル
+                    <!-- 2018/05/04 UPD(S) HFUJIYOS -->
+                    <!--<h3 class="text-xsmall text-overflow" title="タイトル">-->
+                    <!--  タイトル-->
+                    <!--</h3>-->
+                      <h3 class="text-xsmall text-overflow" title="<%= product.title %>">
+                        <%= product.title %>
                       </h3>
+                    <!-- 2018/05/04 UPD(E) HFUJIYOS -->
                       <p class="text-small">
+                        <!--2018/05/05 UPD(S) HFUJIYOS-->
+                        <!--<span class="rating-star">-->
+                        <!--  <i class="star-actived rate-[ここに評価を表示]0"></i>-->
+                        <!--</span>-->
                         <span class="rating-star">
-                          <i class="star-actived rate-[ここに評価を表示]0"></i>
+                          <% if product.reviews.present? %>
+                            <!--2018/05/05 UPD(S) HFUJIYOS-->
+                            <!--<i class="star-actived rate-<%= product.reviews.average(:rate).round %>0"></i>-->
+                            <i class="star-actived rate-<%= product.review_average %>0"></i>
+                            <!--2018/05/05 UPD(E) HFUJIYOS-->
+                          <% else %>
+                            <i class="star-actived rate-0"></i>
+                          <% end %>
                         </span>
+                        <!--2018/05/05 UPD(S) HFUJIYOS-->
                       </p>
                     </div>
                   </li>

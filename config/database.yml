@@ -15,7 +15,10 @@ development:
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
+  # 2018/05/04 UPD(S) HFUJIYOS
+  # socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
+  # 2018/05/04 UPD(E) HFUJIYOS
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,7 +30,10 @@ test:
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
+  # 2018/05/04 UPD(S) HFUJIYOS
+  # socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
+  # 2018/05/04 UPD(E) HFUJIYOS
 
 production:
   adapter: mysql2
@@ -36,4 +42,7 @@ production:
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
+  # 2018/05/04 UPD(S) HFUJIYOS
+  # socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
+  # 2018/05/04 UPD(E) HFUJIYOS

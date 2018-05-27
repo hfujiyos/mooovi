@@ -43,3 +43,13 @@ end
 
 # pry
 gem 'pry-rails'
+
+# 2018/05/04 ADD(S) HFUJIYOS
+gem 'mechanize'
+# 2018/05/04 ADD(E) HFUJIYOS
+
+# 2018/05/05 ADD(S) HFUJIYOS
+gem 'devise'
+
+gem 'paperclip'
+# 2018/05/05 ADD(E) HFUJIYOS
